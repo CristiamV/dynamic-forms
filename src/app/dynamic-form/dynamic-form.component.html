@@ -1,0 +1,13 @@
+<!-- <div  [ngStyle]="{
+    border: '1px solid red',
+    padding: '10px'
+  }"
+> -->
+    <div *ngFor="let model of models">
+      <div [ngSwitch]="model.type">
+        <!-- <app-dynamic-input></app-dynamic-input> -->
+        <app-dynamic-select *ngSwitchCase="'select'" [model]="model" [formName]="dynamicFormGroup"></app-dynamic-select>
+      </div>
+    </div>
+
+<!-- </div> -->

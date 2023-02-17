@@ -1,0 +1,19 @@
+<form [formGroup]="formName">
+  <!-- <label>{{model.label}}:</label>
+    <select [formControlName]="model.name">
+        <option *ngFor="let option of model.options" [value]="option.nameSpanish">
+            {{option.nameSpanish}}
+        </option>
+    </select> -->
+
+  <mat-form-field appearance="fill">
+    <mat-label>País de Residencia</mat-label>
+    <mat-select [formControlName]="model.name">
+      <mat-option
+        *ngFor="let option of model.options"
+        [value]="option.nameSpanish">
+        {{ option.nameSpanish }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
